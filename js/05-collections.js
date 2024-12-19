@@ -1,18 +1,43 @@
-const options = [
-  { label: 'red', color: '#F44336' },
-  { label: 'green', color: '#4CAF50' },
-  { label: 'blue', color: '#2196F3' },
-  { label: 'grey', color: '#607D8B' },
-  { label: 'pink', color: '#E91E63' },
-  { label: 'indigo', color: '#3F51B5' },
-];
+A;
 
-const colorPickerContainerEl = document.querySelector('js-color-picker');
+//! =========================================================
+/* function foo(obj) {
+  return `<li>${(obj, label)}</li>`;
+}
 
-const ulElem = document.querySelector('ul');
+const template = foo({ label: 'red', color: '#F44336' });
+console.log(template); */
+
+//! =========================================================
+function colorTemplate(colorObj) {
+  return `<div class="color-picker__option" style="background-color: ${colorObj.color}">
+        <p>${colorObj.label}</p>
+      </div>`;
+}
+
+function colorsTemplate(arr) {
+  return arr.map(colorTemplate).join('\n');
+}
+
+const markup = colorsTemplate(options);
+
+colorPickerContainerEl.innerHTML = markup;
+
+/* function carTemplate() {}
+function carsTemplate() {}
+
+function userTemplate() {}
+function usersTemplate() {}
+
+//! =========================================================
+/* const ulElem = document.querySelector('ul');
 
 const liElem = `<li class="awawdaa">
     <a href='#'>TestLink</a>
-</li>`;
+</li>`; */
 
-ulElem.insertAdjacentHTML();
+//? ulElem.insertAdjacentHTML('afterbegin', liElem);
+// ulElem.textContent = '<li>Hello world</li>';
+// ulElem.innerHTML = '<li>Hello world</li>';
+
+//! =========================================================
