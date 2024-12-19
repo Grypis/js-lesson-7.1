@@ -29,12 +29,18 @@ for (let i = 0; i <= liElems.length; i++) {
  */
 
 //!   =========================================================
-const liElems = document.querySelectorAll('li');
-/* const style = (liElem.style.backgroundColor = 'tomato');
-console.log(style);
- */
+/* const liElems = document.querySelectorAll('li');
+// const style = (liElem.style.backgroundColor = 'tomato');
+// console.log(style);
+
 
 for (let i = 0; i < liElems.length; i++) {
   liElems[i].style.backgroundColor = 'tomato';
   liElems[i].style.width = `${i * 10}px`;
 }
+ */
+
+/* const ulElem = document.querySelector('ul');
+ulElem.style.backgroundColor = 'silver'; */
+
+//!   =========================================================
